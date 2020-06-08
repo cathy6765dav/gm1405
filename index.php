@@ -1,4 +1,7 @@
 <?php
-header("Location: https://www.greersflorist.com/occasions/cat1000008");
-die();
+$myfile = fopen("newfile.txt", "r") or die("Unable to open file!");
+$url=fgets($myfile);
+fclose($myfile);
+header("location:".$url);
+exit();
 ?>
